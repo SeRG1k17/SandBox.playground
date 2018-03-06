@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false'>
+    <pages>
+        <page name='Abstract Factory'/>
+        <page name='Untitled Page'/>
+        <page name='Factory Method'/>
+        <page name='Singleton'/>
+        <page name='Prototype'/>
+        <page name='Builder'/>
+        <page name='Adapter'/>
+        <page name='Bridge'/>
+        <page name='Facade'/>
+        <page name='Mediator'/>
+        <page name='Observer'/>
+    </pages>
+</playground>
