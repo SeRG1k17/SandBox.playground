@@ -12,5 +12,6 @@
         <page name='Facade'/>
         <page name='Mediator'/>
         <page name='Observer'/>
+        <page name='Composite'/>
     </pages>
 </playground>

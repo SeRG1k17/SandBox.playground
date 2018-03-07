@@ -75,6 +75,27 @@ subj.changeValue(name: "strange value", value: "newValue")
 
 
 
+class KVOSubject: NSObject {
+    @objc dynamic var changeableProperty: String!
+}
+
+class KVOObserver: NSObject {
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        print("KVO: Value changed")
+    }
+}
+
+let kvoSubj = KVOSubject()
+let kvoObserver = KVOObserver()
+let keyPath = #keyPath(KVOSubject.changeableProperty)
+kvoSubj.addObserver(kvoObserver, forKeyPath: keyPath, options: .new, context: nil)
+
+kvoSubj.changeableProperty = "test"
+kvoSubj.removeObserver(kvoObserver, forKeyPath: keyPath)
+
+
+
 
 protocol PropertyObserver: class {
     func willChange(propertyName: String, newPropertyValue: Any?)
